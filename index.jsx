@@ -112,3 +112,9 @@ return (
     </section>
   );
 }
+function TechnicalArsenal() {
+    const skills = {
+        Core: [, "Next.js", "React.js", "Tailwind"],
+        Systems: ["Node.js", "MongoDB", "PostgreSQL"],
+        DevOps: ["AWS", "Docker", "CI/CD"]
+    };
