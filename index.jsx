@@ -118,3 +118,29 @@ function TechnicalArsenal() {
         Systems: ["Node.js", "MongoDB", "PostgreSQL"],
         DevOps: ["AWS", "Docker", "CI/CD"]
     };
+return (
+        <section className="py-32 px-6 md:px-20 bg-[#050505]">
+            <h2 className="text-5xl font-bold mb-6">Technical Arsenal</h2>
+            <p className="text-gray-400 mb-16 max-w-2xl text-lg">
+                Building resilient applications using a modern, scalable stack designed for the cloud.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                {Object.entries(skills).map(([category, items]) => (
+                    <div key={category} className="space-y-6">
+                        <h4 className="text-gray-500 font-mono text-xs tracking-[0.3em] uppercase border-b border-gray-800 pb-4">
+                            {category}
+                        </h4>
+                        <div className="flex flex-wrap gap-3">
+                            {items.map(item => (
+                                <span key={item} className="px-5 py-2.5 bg-[#0f0f0f] border border-gray-800 rounded-xl text-sm font-medium hover:border-blue-500 transition-colors">
+                                    {item}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+    )
+}
