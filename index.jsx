@@ -71,7 +71,7 @@ function HeroSection() {
         {/* Floating Text Overlays */}
         <div className="relative z-10 flex h-full items-center justify-center text-center px-6">
           <motion.div style={{ opacity: opacity1 }} className="absolute">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter">Mohammed Fawaz</h1>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter">Sahil Chadha</h1>
             <p className="text-xl text-gray-300 mt-4">Full Stack Developer</p>
           </motion.div>
 
