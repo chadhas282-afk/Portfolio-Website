@@ -14,3 +14,26 @@ export default function AnimatedPortfolio(){
     </div>
   );
 }
+function HeroSection() {
+  const containerRef = useRef(null);
+  const videoRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+  useEffect(() => {
+    const unsubscribe = smoothProgress.on("change", (latest) => {
+      if (videoRef.current) {
+        const duration = videoRef.current.duration || 0;
+        videoRef.current.currentTime = latest * duration;
+      }
+    });
+    return () => unsubscribe();
+  }, [smoothProgress]);
