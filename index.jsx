@@ -78,4 +78,11 @@ return (
       </div>
     </section>
   );
-
+function SelectedWorks() {
+  const projects = [
+    { title: "Samrt Dashboard", category: "Microservices", span: "md:col-span-2" },
+    { title: "QR Generator", category: "E-commerce", span: "md:col-span-1" },
+    { title: "Calorie Tracker", category: "Storage", span: "md:col-span-1" },
+    { title: "Campus Energy Dashboard", category: "Web App", span: "md:col-span-1" },
+    { title: "Quiz Generator", category: "Web App", span: "md:col-span-1" },
+  ];
