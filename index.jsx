@@ -86,3 +86,29 @@ function SelectedWorks() {
     { title: "Campus Energy Dashboard", category: "Web App", span: "md:col-span-1" },
     { title: "Quiz Generator", category: "Web App", span: "md:col-span-1" },
   ];
+return (
+    <section className="py-32 px-6 md:px-20 bg-black">
+      <h3 className="text-blue-500 font-mono uppercase tracking-widest text-sm mb-4">Case Studies</h3>
+      <h2 className="text-5xl font-bold mb-16">Selected Works</h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {projects.map((proj, i) => (
+          <motion.div
+            key={i}
+            whileHover={{ y: -8, borderColor: '#3b82f6' }}
+            className={`${proj.span} group relative h-96 bg-[#080808] border border-gray-800 rounded-3xl overflow-hidden p-10 flex flex-col justify-end transition-colors`}
+          >
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-black/20 to-black/90 z-0" />
+            <div className="relative z-10">
+               <p className="text-blue-500 text-sm font-mono mb-2">{proj.category}</p>
+               <h4 className="text-3xl font-bold tracking-tight">{proj.title}</h4>
+            </div>
+            <div className="absolute -top-10 -right-10 opacity-5 group-hover:opacity-10 transition-opacity">
+                <div className="w-64 h-64 bg-blue-600 rounded-full blur-[100px]" />
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
